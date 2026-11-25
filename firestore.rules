@@ -1,0 +1,43 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Gamle dueller bevares, men kan ikke ændres med disse nye regler.
+    match /duels/{id} { allow read, write: if false; }
+    match /matches/{id} {
+      function signed() { return request.auth != null; }
+      function member() { return signed() && request.auth.uid in resource.data.participants; }
+      function fields() { return ['host','guest','participants','names','scores','round','turn','answers','winner','createdAt']; }
+      allow get: if signed(); // Rumkode er nødvendig for at deltage.
+      allow list: if signed() && request.query.limit <= 100;
+      allow create: if signed()
+        && request.resource.data.keys().hasOnly(fields())
+        && request.resource.data.host == request.auth.uid
+        && request.resource.data.guest == null
+        && request.resource.data.participants == [request.auth.uid]
+        && request.resource.data.turn == request.auth.uid
+        && request.resource.data.round == 0
+        && request.resource.data.scores[request.auth.uid] == 0;
+      allow update: if signed() && (
+        // Gæsten må kun tilslutte sig et ledigt rum.
+        (resource.data.guest == null && resource.data.host != request.auth.uid
+         && request.resource.data.guest == request.auth.uid
+         && request.resource.data.participants == [resource.data.host, request.auth.uid]
+         && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['guest','participants','names','scores','turn'])
+         && request.resource.data.names[request.auth.uid] is string
+         && request.resource.data.scores[request.auth.uid] == 0
+         && request.resource.data.turn == resource.data.host)
+        ||
+        // Hyggespil: aktiv deltager kan afslutte sin tur.
+        (member() && resource.data.guest != null && resource.data.turn == request.auth.uid
+         && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['scores','answers','round','turn'])
+         && request.resource.data.round == resource.data.round + 1
+         && request.resource.data.turn == (resource.data.host == request.auth.uid ? resource.data.guest : resource.data.host)
+         && request.resource.data.scores[(resource.data.host == request.auth.uid ? resource.data.guest : resource.data.host)] == resource.data.scores[(resource.data.host == request.auth.uid ? resource.data.guest : resource.data.host)]
+         && request.resource.data.scores[request.auth.uid] is int
+         && request.resource.data.scores[request.auth.uid] >= resource.data.scores[request.auth.uid]
+         && request.resource.data.scores[request.auth.uid] <= resource.data.scores[request.auth.uid] + 1)
+      );
+      allow delete: if false;
+    }
+  }
+}

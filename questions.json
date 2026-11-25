@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "question": "Hvad er rækkefølgen i en 4-takts motor?",
+    "answers": [
+      "Indsugning, kompression, arbejde, udstødning",
+      "Indsugning, udstødning, arbejde, kompression",
+      "Kompression, indsugning, arbejde, udstødning",
+      "Indsugning, arbejde, kompression, udstødning"
+    ],
+    "seconds": 20,
+    "correct": [
+      0
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Hvad gør en ladeluftkøler (intercooler)?",
+    "answers": [
+      "Køler motorolien før turboladeren",
+      "Køler indsugningsluften for mere ilt",
+      "Sænker temperaturen på udstødningen",
+      "Opvarmer brændstoffet før indsprøjtning"
+    ],
+    "seconds": 20,
+    "correct": [
+      1
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Hvad er koblingens hovedopgave i en bil?",
+    "answers": [
+      "Øge motorens omdrejningstal i bakgear",
+      "Bremse forhjulene ved nedgearing",
+      "Adskille og forbinde motor og gearkasse",
+      "Styre bilens differentialespærre"
+    ],
+    "seconds": 20,
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Hvad viser et for højt CO-tal i udstødningen?",
+    "answers": [
+      "For mager blanding (for meget luft)",
+      "Utæt udstødningsmanifold",
+      "Defekt partikelfilter på en dieselbil",
+      "For fed blanding (for lidt ilt)"
+    ],
+    "seconds": 30,
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Hvilken farve har højspændingskabler i elbiler?",
+    "answers": [
+      "Orange",
+      "Blå og lilla",
+      "Gul og grøn",
+      "Sort med rød stribe"
+    ],
+    "seconds": 10,
+    "correct": [
+      0
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Hvorfor er CAN-bus-ledninger snoet sammen?",
+    "answers": [
+      "For at kunne bære høj startstrøm",
+      "For at modvirke elektromagnetisk støj",
+      "For at spare plads i dørgennemføringer",
+      "For at sænke spændingen fra 12V til 5V"
+    ],
+    "seconds": 20,
+    "correct": [
+      1
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Hvordan måles strømstyrke (Ampere) med multimeter?",
+    "answers": [
+      "Parallelt over forbrugeren",
+      "Uden strøm på kredsløbet",
+      "I serie med forbrugeren",
+      "Mellem batteriets pluspol og stel"
+    ],
+    "seconds": 20,
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Hvad kræves før arbejde på elbilens højvoltsystem?",
+    "answers": [
+      "Kun almindelige arbejdshandsker",
+      "At 12V-batteriet lades op samtidig",
+      "At motoren står i tomgang",
+      "L-AUS kursus og spændingsløs tilstand"
+    ],
+    "seconds": 20,
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Hvorfor skal bremsevæske udskiftes jævnligt?",
+    "answers": [
+      "Den optager fugt, som sænker kogepunktet",
+      "Den slides mekanisk op af bremsestemplerne",
+      "Den mister smøreevnen til kaliberens stifter",
+      "Den bliver for tyktflydende i frostvejr"
+    ],
+    "seconds": 20,
+    "correct": [
+      0
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Hvad gør ABS-systemet ved en hård opbremsning?",
+    "answers": [
+      "Stabiliserer bilen ved sidevind",
+      "Forhindrer hjulene i at blokere",
+      "Øger bremsetrykket på baghjulene",
+      "Kobler motoren fra gearkassen"
+    ],
+    "seconds": 20,
+    "correct": [
+      1
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Hvad betyder 'sporing' (toe-in/toe-out)?",
+    "answers": [
+      "Hjulenes hældning set forfra (camber)",
+      "Fjederbenets hældning set fra siden",
+      "Hjulenes vinkel set ovenfra",
+      "Afstanden fra dæk til skærmkant"
+    ],
+    "seconds": 20,
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Hvad betyder '91V' på et bildæk?",
+    "answers": [
+      "Dækkets bredde og profilhøjde",
+      "Produktionsuge og produktionsår",
+      "Anbefalet dæktryk i bar og PSI",
+      "Belastningsindeks og hastighedskode"
+    ],
+    "seconds": 20,
+    "correct": [
+      3
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Hvilket værktøj måler bremseskivens tykkelse bedst?",
+    "answers": [
+      "Mikrometerskrue",
+      "Målebånd",
+      "Bladmåler (søgerblade)",
+      "Tommestok"
+    ],
+    "seconds": 20,
+    "correct": [
+      0
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Hvordan opbevares en klik-momentnøgle efter brug?",
+    "answers": [
+      "Spændt op til maksimalt moment",
+      "Stillet på laveste moment (aflastet)",
+      "Nedsænket i syrefri motorolie",
+      "Låst fast i skruestikken"
+    ],
+    "seconds": 20,
+    "correct": [
+      1
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Hvad bruges et udsugningsanlæg til på værkstedet?",
+    "answers": [
+      "Køle bremserne efter prøvekørsel",
+      "Tørre nyvaskede motorrum hurtigt",
+      "Fjerne sundhedsskadelig udstødningsgas",
+      "Suge spildolie op fra værkstedsgulvet"
+    ],
+    "seconds": 10,
+    "correct": [
+      2
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Hvad viser et sikkerhedsdatablad (SDS)?",
+    "answers": [
+      "Bilens serviceintervaller og oliemængde",
+      "Tilspændingsmomenter på topstykket",
+      "El-diagrammer over sikringsboksen",
+      "Farer og værnemidler ved kemikalier"
+    ],
+    "seconds": 20,
+    "correct": [
+      3
+    ]
+  }
+]
